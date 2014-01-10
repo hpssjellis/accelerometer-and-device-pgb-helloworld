@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.what.why"
-        version   = "0.0.1">
+        version   = "0.0.2">
 
-    <name>pg-rookie-screen2</name>
+    <name>pg-rookie-all-pluggins</name>
 
 
     <preference name="permissions"                value="none"/>

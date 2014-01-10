@@ -29,19 +29,14 @@
 
 
 
-        
-    <gap:splash src="splash.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
-    <gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
-    <gap:splash src="splash.png" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
-    <gap:splash src="splash.png" gap:platform="android" gap:density="xhdpi" /> <!-- 720x1280 -->
-
-
-
-
-    
-
-        <gap:plugin name="org.apache.cordova.splashscreen" />
-
+   <gap:plugin name="com.flexblast.cordova.plugin.assetslib" />
+   <gap:plugin name="com.vliesaputra.deviceinformation" />
+   <gap:plugin name="io.github.pwlin.cordova.plugins.fileopener" />
+   <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" />
+   <gap:plugin name="com.phonegap.plugin.statusbar" />
+   <gap:plugin name="org.apache.cordova.contacts" />
+   <gap:plugin name="org.apache.cordova.camera" />
+   <gap:plugin name="org.apache.cordova.battery-status" />
    
         <access origin="*" /> 
 

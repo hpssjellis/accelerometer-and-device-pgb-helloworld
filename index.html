@@ -10,20 +10,21 @@
 
     function onDeviceReady() {
   
-         alert('You can use the pluggins now')
+      var options = { frequency: 100 }; // if 1000 update every second
+       watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
        
     }
     
-    
-
+  
 
     // onSuccess: Get a snapshot of the current acceleration
     //
     function onAccelSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
+        
+       document.getElementById('myAccelData').innerHTML= 'Acceleration X: ' + acceleration.x + '<br>' +
+              'Acceleration Y: ' + acceleration.y + '<br>' +
+              'Acceleration Z: ' + acceleration.z + '<br>' +
+              'Timestamp: '      + acceleration.timestamp + '<br>';
     }
 
     // onError: Failed to get the acceleration
@@ -47,6 +48,10 @@
 <font style="font-size:30px">  
 
 <h3>Trying to load all basic device pluggins like what phonegap 2 could do</h3>
+
+<div id="myAccelData">Acceleration stuff should go here</div>
+
+
  
 <input type=button value="Device Info" style="font-size:30px" onclick="{
 
@@ -59,14 +64,6 @@
 }">
    
    
-   
-<input type=button value="Accelerator Info" style="font-size:30px" onclick="{
-
-     var options = { frequency: 6000 };
-            
-    watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
-  
-}">
 
 <input type=button value="Accelerator Stop" style="font-size:30px" onclick="{
 

@@ -1,8 +1,11 @@
-pg-rookie-allPlug
-=================
 
-Trying to make all the plugins work like in Phonegap 2.0
+pgb-helloworld-accelerometer-and-device
 
-Presently in the testing stage
+Device works fine but the accelerometer is strange. The API's at phonegap.com   http://docs.phonegap.com/en/3.1.0/cordova_accelerometer_accelerometer.md.html#Accelerometer said something that did not work for me. What worked for me in the config.xml file was
 
-So far on a galaxy S3. I have got the device working but not the accelerometer
+  <gap:plugin name="org.apache.cordova.device-motion" />
+
+
+So far on a Samsung Galaxy S3 I could not get the accelerometer working, but it was my phone. when I sent the App to someone else it worked fine.
+
+

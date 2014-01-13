@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.what.why"
-        version   = "0.2.2">
+        version   = "0.2.3">
 
     <name>pgb-helloworld-many-pluggins</name>
 
@@ -31,12 +31,9 @@
     
     
     <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.devicemotion.AccelListener" />
+    
 
-    
-    <feature name="Accelerometer">
-         <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
-    </feature>
-    
     
     
   <!--  <gap:plugin name="com.phonegap.plugin.statusbar" />

@@ -9,8 +9,8 @@
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-  
-      var options = { frequency: 100 }; // if 1000 update every second
+     alert('devices ready to use');
+      var options = { frequency: 1000 }; // if 1000 update every second
        watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
        
     }
@@ -21,7 +21,7 @@
     //
     function onAccelSuccess(acceleration) {
         
-       document.getElementById('myAccelData').innerHTML= 'Acceleration X: ' + acceleration.x + '<br>' +
+       document.getElementById('myAccelData').innerHTML = 'Acceleration X: ' + acceleration.x + '<br>' +
               'Acceleration Y: ' + acceleration.y + '<br>' +
               'Acceleration Z: ' + acceleration.z + '<br>' +
               'Timestamp: '      + acceleration.timestamp + '<br>';
@@ -47,9 +47,9 @@
 <body>
 <font style="font-size:30px">  
 
-<h3>Trying to load all basic device pluggins like what phonegap 2 could do</h3>
+<h3>Acceleration and Device Information Hello World</h3>
 
-<div id="myAccelData">Acceleration stuff should go here</div>
+<div id="myAccelData" > Acceleration stuff should go here </div>
 
 
  

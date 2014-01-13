@@ -31,8 +31,14 @@
     function onAccelError() {
         alert('onError!');
     }
-
     
+
+    function stopAccelWatch() {
+            if (watchID) {
+                navigator.accelerometer.clearWatch(watchID);
+                watchID = null;
+            }
+        } 
 
 
 </script>
@@ -56,10 +62,17 @@
    
 <input type=button value="Accelerator Info" style="font-size:30px" onclick="{
 
-     alert('Trying to access Accelerometer')
-     navigator.accelerometer.getCurrentAcceleration(onAccelSuccess, onAccelError);
+     var options = { frequency: 6000 };
+            
+    watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
+  
 }">
 
+<input type=button value="Accelerator Stop" style="font-size:30px" onclick="{
+
+    stopAccelWatch();
+  
+}">
 
     
     

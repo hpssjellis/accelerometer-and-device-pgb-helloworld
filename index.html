@@ -35,8 +35,8 @@
    
 <input type=button value="Accelerator Info" style="font-size:30px" onclick="{
 
-
-     navigator.accelerometer.getCurrentAcceleration(document.onSuccess, document.onError);
+     alert('Trying to access Accelerometer')
+     navigator.accelerometer.getCurrentAcceleration(onAccelSuccess, onAccelError);
 }">
 
 
@@ -44,7 +44,7 @@
 
     // onSuccess: Get a snapshot of the current acceleration
     //
-    function document.onSuccess(acceleration) {
+    function onAccelSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
               'Acceleration Y: ' + acceleration.y + '\n' +
               'Acceleration Z: ' + acceleration.z + '\n' +
@@ -53,7 +53,7 @@
 
     // onError: Failed to get the acceleration
     //
-    function document.onError() {
+    function onAccelError() {
         alert('onError!');
     }
 

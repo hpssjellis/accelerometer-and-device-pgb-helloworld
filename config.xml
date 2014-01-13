@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.what.why"
-        version   = "0.2.3">
+        version   = "0.2.4">
 
     <name>pgb-helloworld-many-pluggins</name>
 
@@ -31,7 +31,7 @@
     
     
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.devicemotion.AccelListener" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
     
 
     

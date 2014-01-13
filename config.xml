@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.what.why"
-        version   = "0.2.5">
+        version   = "0.2.6">
 
-    <name>pgb-helloworld-many-pluggins</name>
+    <name>pgb-helloworld-accelerometer-and-device</name>
 
 
   <!--  <preference name="permissions"                value="none"/>  -->

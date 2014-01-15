@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.rocksetta.accel"
-        version   = "0.2.8">
+        id        = "com.yourwebsite.accelerometer"
+        version   = "0.2.9">
 
-    <name>pgb-helloworld-accelerometer-and-device</name>
+    <name>accelerometer-and-device-pgb-helloworld</name>
 
 
   <!--  <preference name="permissions"                value="none"/>  -->

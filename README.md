@@ -1,5 +1,5 @@
-
-pgb-helloworld-accelerometer-and-device
+accelerometer-and-device-pgb-helloworld
+================================
 
 Device works fine but the accelerometer is strange. The API's at phonegap.com   http://docs.phonegap.com/en/3.1.0/cordova_accelerometer_accelerometer.md.html#Accelerometer said something that did not work for me. What worked for me in the config.xml file was
 

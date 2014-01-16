@@ -9,3 +9,16 @@ Device works fine but the accelerometer is strange. The API's at phonegap.com   
 So far on a Samsung Galaxy S3 I could not get the accelerometer working, but it was my phone. when I sent the App to someone else it worked fine.
 
 
+
+
+
+
+
+
+
+
+
+
+************************************************************************************************************
+
+###Disclaimer: I spend my time getting complex things working in simple ways. I have no idea if I am doing anything correctly so please beware if you use my work. My website is at http://www.rocksetta.com

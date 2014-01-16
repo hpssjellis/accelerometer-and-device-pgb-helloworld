@@ -6,7 +6,7 @@
         id        = "com.yourwebsite.accelerometer"
         version   = "0.2.9">
 
-    <name>accelerometer-and-device-pgb-helloworld</name>
+    <name>j-accelerometer-and-device-pgb-helloworld</name>
 
 
   <!--  <preference name="permissions"                value="none"/>  -->

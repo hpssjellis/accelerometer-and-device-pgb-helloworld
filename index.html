@@ -45,7 +45,7 @@
 </script>
 </head>
 <body>
-<font style="font-size:30px">  
+<font style="font-size:20px">  
 
 <h3>Acceleration and Device Information Hello World</h3>
 
@@ -53,19 +53,20 @@
 
 
  
-<input type=button value="Device Info" style="font-size:30px" onclick="{
+<input type=button value="Device Info" style="font-size:20px" onclick="{
 
 
-      alert('Device Model: '    + device.model    + '\n' +
+      document.getElementById('myAccelData').innerHTML=
+                            'Device Model: '    + device.model    + '\n' +
                             'Device Cordova: '  + device.cordova  + '\n' +
                             'Device Platform: ' + device.platform + '\n' +
                             'Device UUID: '     + device.uuid     + '\n' +
-                            'Device Version: '  + device.version  + '\n')
+                            'Device Version: '  + device.version  + '\n'
 }">
    
    
 
-<input type=button value="Accelerator Stop" style="font-size:30px" onclick="{
+<input type=button value="Accelerator Stop" style="font-size:20px" onclick="{
 
     stopAccelWatch();
   

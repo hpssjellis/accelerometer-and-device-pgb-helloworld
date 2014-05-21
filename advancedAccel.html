@@ -1,1 +1,91 @@
-g
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+
+document.myXFactor = 5
+document.myYFactor = 5
+//document.myZFactor = 5
+document.myTime = 0
+
+
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+     alert('devices ready to use');
+      var options = { frequency: 1000 }; // if 1000 update every second
+       watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
+       
+    }
+    
+  
+
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onAccelSuccess(acceleration) {
+      
+        myXSpot = document.getElementById('myDiv1').style.left
+        myYSpot = document.getElementById('myDiv1').style.top
+        
+        myX = parseInt(acceleration.x * document.myXFactor)
+        myY =  parseInt(acceleration.y * document.myYFactor)
+     //   myZ = parseInt(acceleration.z * document.myZFactor)
+        document.myTime = acceleration.timestamp
+         
+         
+       if (myXSpot < window.innerWidth) && (myXSpot > 0) { 
+           myXSpot =  myX + 'px'
+        }
+        
+ 
+        if (myYSpot < window.innerHeight) && (myYSpot > 0) { 
+           myYSpot =  myY + 'px'
+        }
+        
+
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onAccelError() {
+        alert('onError!');
+    }
+    
+
+    function stopAccelWatch() {
+            if (watchID) {
+                navigator.accelerometer.clearWatch(watchID);
+                watchID = null;
+            }
+        } 
+
+
+</script>
+</head>
+<body>
+<font style="font-size:20px">  
+
+<h3>Advanced Acceleration  Hello World</h3>
+
+
+<div id="myDiv1" style="position:absolute; left:50px; top:100px">Img here?</div>
+
+
+   
+
+    
+ 
+    
+    
+    
+    
+    
+       
+</font>
+</body>
+</html>

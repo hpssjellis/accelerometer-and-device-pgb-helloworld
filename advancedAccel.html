@@ -10,7 +10,7 @@
 
     function onDeviceReady() {
      alert('devices ready to use');
-      var options = { frequency: 20 }; // if 1000 update every second
+      var options = { frequency: 40 }; // if 1000 update every second
        watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
        
     }
@@ -21,8 +21,13 @@
     //
     function onAccelSuccess(acceleration) {
 
-        document.getElementById('myDiv1').style.left = parseInt(document.getElementById('myDiv1').style.left)+acceleration.x*7 + 'px' 
-        document.getElementById('myDiv1').style.top = parseInt(document.getElementById('myDiv1').style.top)+ acceleration.y*4 + 'px' 
+        document.getElementById('myDiv1').style.left = parseInt(document.getElementById('myDiv1').style.left)+acceleration.x + 'px' 
+        document.getElementById('myDiv1').style.top = parseInt(document.getElementById('myDiv1').style.top)+ acceleration.y + 'px' 
+    
+       if (parseInt(document.getElementById('myDiv1').style.left) < 0){document.getElementById('myDiv1').style.left = '0px'}
+       if (parseInt(document.getElementById('myDiv1').style.left) > windwo.width){document.getElementById('myDiv1').style.left =window.width +  'px'}
+       if (parseInt(document.getElementById('myDiv1').style.top) < 0){document.getElementById('myDiv1').style.top = '0px'}
+       if (parseInt(document.getElementById('myDiv1').style.top) > window.height){document.getElementById('myDiv1').style.top = window.height + 'px'}
     }
 
     // onError: Failed to get the acceleration

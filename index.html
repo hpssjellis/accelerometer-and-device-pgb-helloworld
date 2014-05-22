@@ -21,13 +21,13 @@
     //
     function onAccelSuccess(acceleration) {
 
-        document.getElementById('myDiv1').style.left = parseInt(document.getElementById('myDiv1').style.left)+(-1*acceleration.x/2) + 'px' 
-        document.getElementById('myDiv1').style.top = parseInt(document.getElementById('myDiv1').style.top)+ acceleration.y/2 + 'px' 
+        document.getElementById('myDiv1').style.left = parseInt(document.getElementById('myDiv1').style.left)+(-1*acceleration.x*2) + 'px' 
+        document.getElementById('myDiv1').style.top = parseInt(document.getElementById('myDiv1').style.top)+ acceleration.y*2 + 'px' 
     
        if (parseInt(document.getElementById('myDiv1').style.left) < 0){document.getElementById('myDiv1').style.left = '0px'}
-       if (parseInt(document.getElementById('myDiv1').style.left) > window.innerWidth){document.getElementById('myDiv1').style.left =window.innerWidth +  'px'}
+       if (parseInt(document.getElementById('myDiv1').style.left) > window.innerWidth - document.getElementById('myDiv1').style.width ){document.getElementById('myDiv1').style.left =window.innerWidth +  'px'}
        if (parseInt(document.getElementById('myDiv1').style.top) < 0){document.getElementById('myDiv1').style.top = '0px'}
-       if (parseInt(document.getElementById('myDiv1').style.top) > window.innerHeight){document.getElementById('myDiv1').style.top = window.innerHeight + 'px'}
+       if (parseInt(document.getElementById('myDiv1').style.top) > window.innerHeight - document.getElementById('myDiv1').style.height){document.getElementById('myDiv1').style.top = window.innerHeight + 'px'}
     }
 
     // onError: Failed to get the acceleration

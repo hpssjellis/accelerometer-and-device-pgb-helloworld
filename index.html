@@ -21,13 +21,20 @@
     //
     function onAccelSuccess(acceleration) {
 
+
         document.getElementById('myDiv1').style.left = parseInt(document.getElementById('myDiv1').style.left)+(-1*acceleration.x*4) + 'px' 
         document.getElementById('myDiv1').style.top = parseInt(document.getElementById('myDiv1').style.top)+ (acceleration.y*4) + 'px' 
     
+    
+       // Keep on the screen
+       
+       myRight = window.innerWidth - parseInt(document.getElementById('myDiv1').style.width)
+       myDown =  window.innerHeight - parseInt(document.getElementById('myDiv1').style.height)
+    
        if (parseInt(document.getElementById('myDiv1').style.left) < 0){document.getElementById('myDiv1').style.left = '0px'}
-       if (parseInt(document.getElementById('myDiv1').style.left) > window.innerWidth - 50 ){document.getElementById('myDiv1').style.left =window.innerWidth +  'px'}
-       if (parseInt(document.getElementById('myDiv1').style.top) < 0){document.getElementById('myDiv1').style.top = '0px'}
-       if (parseInt(document.getElementById('myDiv1').style.top) > window.innerHeight - 100){document.getElementById('myDiv1').style.top = window.innerHeight + 'px'}
+       if (parseInt(document.getElementById('myDiv1').style.left) >  myRight ){document.getElementById('myDiv1').style.left =myRight + 'px'
+       if (parseInt(document.getElementById('myDiv1').style.top) < 0 ){document.getElementById('myDiv1').style.top = '0px'}
+       if (parseInt(document.getElementById('myDiv1').style.top) > myDown ){document.getElementById('myDiv1').style.top = myDown + 'px'}
     }
 
     // onError: Failed to get the acceleration
@@ -59,7 +66,7 @@ You should tilt the screen and see if the button moves
 
  
     
-<div id="myDiv1" style="position:absolute; width:100px; height:50px; left:50px; top:100px">
+<div id="myDiv1" style="position:absolute; left:50px; top:100px">
     
    
 <input type=button value="easier.html" style="font-size:20px" ontouchstart="{
@@ -67,7 +74,7 @@ You should tilt the screen and see if the button moves
 }">
 </div>
 
-<input type=button value="easier.html" style="font-size:20px" ontouchstart="{
+<input type=button value="style.width" style="font-size:20px" ontouchstart="{
  alert(  document.getElementById('myDiv1').style.width)
 }">
 

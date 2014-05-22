@@ -10,7 +10,7 @@
 
     function onDeviceReady() {
      alert('devices ready to use');
-      var options = { frequency: 10 }; // if 1000 update every second
+      var options = { frequency: 40 }; // if 1000 update every second
        watchID = navigator.accelerometer.watchAcceleration(onAccelSuccess, onAccelError, options);
        
     }
@@ -51,6 +51,7 @@
 <font style="font-size:20px">  
 
 <h3>Acceleration and Device Information Hello World</h3>
+You should tilt the screen and see if the button moves
 
 
 
@@ -61,8 +62,8 @@
 <div id="myDiv1" style="position:absolute; left:50px; top:100px">
     
    
-<input type=button value="Advanced" style="font-size:20px" ontouchstart="{
-  alert(window.innerWidth)
+<input type=button value="easier.html" style="font-size:20px" ontouchstart="{
+ location = 'easier.html'
 }">
 
 </div>

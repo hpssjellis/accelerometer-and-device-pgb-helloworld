@@ -28,8 +28,8 @@
     
        // Keep on the screen
        
-       myRight = window.innerWidth - parseInt(document.getElementById('myDiv1').style.width)
-       myDown =  window.innerHeight - parseInt(document.getElementById('myDiv1').style.height)
+       var myRight = window.innerWidth - parseInt(document.getElementById('myDiv1').style.width);
+       var myDown =  window.innerHeight - parseInt(document.getElementById('myDiv1').style.height);
     
        if (parseInt(document.getElementById('myDiv1').style.left) < 0){document.getElementById('myDiv1').style.left = '0px'}
        if (parseInt(document.getElementById('myDiv1').style.left) >  myRight ){document.getElementById('myDiv1').style.left = myRight + 'px'}

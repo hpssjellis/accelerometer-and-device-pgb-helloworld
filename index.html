@@ -32,7 +32,7 @@
        myDown =  window.innerHeight - parseInt(document.getElementById('myDiv1').style.height)
     
        if (parseInt(document.getElementById('myDiv1').style.left) < 0){document.getElementById('myDiv1').style.left = '0px'}
-       if (parseInt(document.getElementById('myDiv1').style.left) >  myRight ){document.getElementById('myDiv1').style.left =myRight + 'px'
+       if (parseInt(document.getElementById('myDiv1').style.left) >  myRight ){document.getElementById('myDiv1').style.left = myRight + 'px'}
        if (parseInt(document.getElementById('myDiv1').style.top) < 0 ){document.getElementById('myDiv1').style.top = '0px'}
        if (parseInt(document.getElementById('myDiv1').style.top) > myDown ){document.getElementById('myDiv1').style.top = myDown + 'px'}
     }
@@ -66,7 +66,7 @@ You should tilt the screen and see if the button moves
 
  
     
-<div id="myDiv1" style="position:absolute; width:100px; Height:50px; left:200px; top:200px">
+<div id="myDiv1" style="position:absolute; width:100px; height:50px; left:200px; top:200px">
     
    
 <input type=button value="easier.html" style="font-size:20px" ontouchstart="{
